@@ -137,8 +137,8 @@ def localheur(C, firstcity=0):
             mindist = tempdist
             # If a more optimized solution is found, it is printed to the 
             # terminal
-            print('Locally Optimized Solution: ')
-            printer(minpath, mindist)
+            # print('Locally Optimized Solution: ')
+            # printer(minpath, mindist)
 
         # The switch is reverted to the initial state
         copy[count+1], copy[count+2] = path_copy[count+2], path_copy[count+1]
@@ -177,36 +177,48 @@ def printer(path, dist):
 
 
 if __name__ == "__main__":
-    
-    start_time = int(round(time.time() * 1000000))
-    print('Processing gr17.tsp')
-    C = read_tsp('gr17.tsp')
-    path, dist = greedheur(C,3)
-    print('Greedy Solution:')
-    printer(path, dist)
-    print(int(round(time.time() * 1000000))-start_time)
-    start_time = int(round(time.time() * 1000000))
-    localheur(C, 3)
-    print(int(round(time.time() * 1000000))-start_time)
 
-    print('Processing gr21.tsp')
-    C = read_tsp('gr21.tsp')
-    path, dist = greedheur(C,10)
-    print('Greedy Solution:')
-    printer(path, dist)
-    localheur(C, 10)
+    # print('Processing gr17.tsp')
+    # C = read_tsp('gr17.tsp')
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("greedheur(read_tsp('gr17.tsp'), 3)", setup="from __main__ import greedheur, read_tsp", number=1000)/1000)
+    # path, dist = greedheur(C,3)
+    # print('Greedy Solution:')
+    # printer(path, dist)
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("localheur(read_tsp('gr17.tsp'), 3)", setup="from __main__ import greedheur, localheur, read_tsp", number=1000)/1000)
+    # localheur(C, 3)
 
-    print('Processing gr24.tsp')
-    C = read_tsp('gr24.tsp')
-    path, dist = greedheur(C)
-    print('Greedy Solution:')
-    printer(path, dist)
-    localheur(C)
+    # print('Processing gr21.tsp')
+    # C = read_tsp('gr21.tsp')
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("greedheur(read_tsp('gr21.tsp'), 10)", setup="from __main__ import greedheur, read_tsp", number=1000)/1000)
+    # path, dist = greedheur(C,10)
+    # print('Greedy Solution:')
+    # printer(path, dist)
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("localheur(read_tsp('gr21.tsp'), 10)", setup="from __main__ import greedheur, localheur, read_tsp", number=1000)/1000)
+    # localheur(C, 10)
+
+    # print('Processing gr24.tsp')
+    # C = read_tsp('gr24.tsp')
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("greedheur(read_tsp('gr24.tsp'))", setup="from __main__ import greedheur, read_tsp", number=1000)/1000)
+    # path, dist = greedheur(C)
+    # print('Greedy Solution:')
+    # printer(path, dist)
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("localheur(read_tsp('gr24.tsp'))", setup="from __main__ import greedheur, localheur, read_tsp", number=1000)/1000)
+    # localheur(C)
 
 
-    print('Processing gr24.tsp')
-    C = read_tsp('gr48.tsp')
-    path, dist = greedheur(C, 46)
-    print('Greedy Solution:')
-    printer(path, dist)
-    localheur(C, 46)
+    # print('Processing gr48.tsp')
+    # C = read_tsp('gr48.tsp')
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("greedheur(read_tsp('gr48.tsp'), 46)", setup="from __main__ import greedheur, read_tsp", number=1000)/1000)
+    # path, dist = greedheur(C, 46)
+    # print('Greedy Solution:')
+    # printer(path, dist)
+    # print('Average loop time for 1000 loops: ')
+    # print(timeit.timeit("localheur(read_tsp('gr48.tsp'), 46)", setup="from __main__ import greedheur, localheur, read_tsp", number=1000)/1000)
+    # localheur(C, 46)
